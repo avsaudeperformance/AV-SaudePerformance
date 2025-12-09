@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV - Saúde & Performance</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="assets/images/img.jpg" type="image/jpg">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loader-center">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page hidden">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="app.navigate('home')">
+                        <div class="logo-icon">
+                            <img src="assets/images/img.jpg" alt="Logo" class="logo-img">
+                        </div>
+                        <span class="logo-text"><b>AV - Saúde & Performance</b></span>
+                    </div>
+                    <div id="home-header-buttons">
+                        <!-- Will be filled by JavaScript based on login state -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <section class="hero">
+                <div class="hero-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <h1>Nutrição  clínica + treinamento  físico baseado em evidência</h1>
+                <p class="hero-subtitle">
+                    Nutrição e treino personalizados por profissionais especializadas
+                </p>
+
+                <div class="action-buttons" id="home-action-buttons">
+                    <!-- Will be filled by JavaScript based on login state -->
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Conheça Nossas Profissionais</h2>
+                <div class="space-y-6">
+                    <div class="card-gradient card-primary">
+                        <div class="pro-card-header">
+                            <div class="pro-icon">
+                                <img src="assets/images/nutri.jpg" alt="Nutricionista">
+                            </div>
+                            <div class="pro-info">
+                                <h3>Nutricionista <b>Viviane Duarte</b></h3>
+                                <p>Formada pela UNILESTE-MG em 2010, especialista em Nutrição Clínica com ênfase em Metabolismo,</p>
+                                <p>Mais de 15 anos de experiência em consultório e atuação em avaliação,</p>
+                                <p>Modulação e acompanhamento nutricional individualizado.</p>
+                            </div>
+                        </div>
+                        <p style="margin-bottom: 1rem; opacity: 0.9;">
+                            Planos alimentares personalizados para seus objetivos. 
+                            Acompanhamento nutricional completo e orientação individualizada.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Nutrição Clínica</span>
+                            <span class="tag">Emagrecimento</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+
+                    <div class="card-gradient card-accent">
+                        <div class="pro-card-header">
+                            <div class="pro-icon">
+                                <img src="assets/images/edu+fis.jpg" alt="Educadora Física">
+                            </div>
+                            <div class="pro-info">
+                                <h3>Educadora Física <b>Amanda Audria</b></h3>
+                                <p>Certificada</p>
+                            </div>
+                        </div>
+                        <p style="margin-bottom: 1rem; opacity: 0.9;">
+                            Treinos personalizados para todos os níveis. 
+                            Aulas ao vivo e acompanhamento da sua evolução física.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Musculação</span>
+                            <span class="tag">Funcional</span>
+                            <span class="tag">Aeróbico</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Por que escolher nosso programa?</h2>
+                <div class="space-y-4">
+                    <div class="card">
+                        <div class="benefit-card">
+                            <div class="benefit-icon benefit-icon-primary">
+                                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Acompanhamento Personalizado</h3>
+                                <p>Treinos e dietas criados especialmente para você, com base nos seus objetivos e necessidades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="benefit-card">
+                            <div class="benefit-icon benefit-icon-accent">
+                                <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Suporte Completo</h3>
+                                <p>Duas profissionais dedicadas ao seu sucesso. Orientação nutricional e física integradas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="benefit-card">
+                            <div class="benefit-icon benefit-icon-secondary">
+                                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Resultados Reais</h3>
+                                <p>Acompanhe seu progresso, registre suas atividades e veja sua evolução semana a semana.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="card-gradient card-cta" style="padding: 2rem; text-align: center;">
+                    <h2 style="font-size: 1.875rem; margin-bottom: 1rem;">
+                        Pronto para começar sua transformação?
+                    </h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem; opacity: 0.9;">
+                        Junte-se a centenas de pessoas que já estão transformando suas vidas
+                    </p>
+                    <button class="btn btn-white btn-lg btn-full" onclick="app.navigate('signup')">
+                        INSCREVER-SE AGORA
+                    </button>
+                </div>
+            </section>
+
+            <footer>
+                <p>© 2025 AV - Saúde & Performance</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- LOGIN PAGE -->
+    <div id="page-login" class="page hidden">
+        <div class="container-sm" style="padding-top: 3rem; padding-bottom: 3rem;">
+            <button class="btn btn-outline" onclick="app.navigate('home')" style="margin-bottom: 2rem;">
+                <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Voltar
+            </button>
+
+            <div class="card" style="max-width: 28rem; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div class="hero-icon" style="width: 4rem; height: 4rem; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    </div>
+                    <h1 style="font-size: 1.875rem; margin-bottom: 0.5rem;">Bem-vindo de volta!</h1>
+                    <p style="color: var(--muted-foreground);">Entre com sua conta</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label" for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="password-wrapper">
+    <input type="password" id="login-password" name="password" class="form-input" required>
+    <button type="button" class="toggle-password" onclick="toggleLoginPassword()">
+        👁
+    </button>
+</div>
+
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-full" id="loginBtn">
+                        <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                        ENTRAR
+                    </button>
+                </form>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <p style="color: var(--muted-foreground);">
+                        Não tem uma conta? 
+                        <a href="#" onclick="app.navigate('signup'); return false;" style="color: var(--primary); text-decoration: none;">
+                            Cadastre-se
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGNUP PAGE -->
+    <div id="page-signup" class="page hidden">
+        <div class="container-sm" style="padding-top: 3rem; padding-bottom: 3rem;">
+            <button class="btn btn-outline" onclick="app.handleSignupBack()" style="margin-bottom: 2rem;">
+                <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Voltar
+            </button>
+
+            <div class="card" style="max-width: 28rem; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div class="hero-icon" style="width: 4rem; height: 4rem; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                    </div>
+                    <h1 style="font-size: 1.875rem; margin-bottom: 0.5rem;">Criar Conta</h1>
+                    <p style="color: var(--muted-foreground);">Comece sua jornada de transformação</p>
+                </div>
+
+                <!-- Progress Indicator -->
+                <div style="display: flex; justify-content: space-between; margin-bottom: 2rem; position: relative;">
+                    <div style="position: absolute; top: 1rem; left: 0; right: 0; height: 2px; background: rgba(255, 255, 255, 0.1); z-index: 0;"></div>
+                    <div id="progress-line" style="position: absolute; top: 1rem; left: 0; height: 2px; background: var(--primary); z-index: 1; width: 0%; transition: width 0.3s;"></div>
+                    
+                    <div style="display: flex; flex-direction: column; align-items: center; z-index: 2; flex: 1;">
+                        <div id="step-1" class="step-indicator" style="width: 2rem; height: 2rem; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">1</div>
+                        <span style="font-size: 0.75rem; margin-top: 0.5rem; color: var(--muted-foreground);">Dados</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; z-index: 2; flex: 1;">
+                        <div id="step-2" class="step-indicator" style="width: 2rem; height: 2rem; border-radius: 50%; background: rgba(255, 255, 255, 0.1); color: var(--muted-foreground); display: flex; align-items: center; justify-content: center; font-weight: 600;">2</div>
+                        <span style="font-size: 0.75rem; margin-top: 0.5rem; color: var(--muted-foreground);">Avaliação</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; z-index: 2; flex: 1;">
+                        <div id="step-3" class="step-indicator" style="width: 2rem; height: 2rem; border-radius: 50%; background: rgba(255, 255, 255, 0.1); color: var(--muted-foreground); display: flex; align-items: center; justify-content: center; font-weight: 600;">3</div>
+                        <span style="font-size: 0.75rem; margin-top: 0.5rem; color: var(--muted-foreground);">Concluído</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Basic Info -->
+                <div id="step-1-content">
+                    <form id="signupForm1">
+                        <div class="form-group">
+                            <label class="form-label" for="signup-name">Nome Completo</label>
+                            <input type="text" id="signup-name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-email">Email</label>
+                            <input type="email" id="signup-email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-password">Senha</label>
+                            <input type="password" id="signup-password" name="password" class="form-input" minlength="6" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-confirm-password">Confirmar Senha</label>
+                            <input type="password" id="signup-confirm-password" name="confirmPassword" class="form-input" minlength="6" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            Próximo
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Step 2: Assessment -->
+                <div id="step-2-content" class="hidden">
+                    <form id="signupForm2">
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem; text-align: center;">
+                            Essas informações ajudarão nossas profissionais a criar um plano personalizado para você
+                        </p>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-weight">Peso (kg)</label>
+                            <input type="number" id="signup-weight" name="weight" class="form-input" step="0.1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-height">Altura (cm)</label>
+                            <input type="number" id="signup-height" name="height" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-age">Idade</label>
+                            <input type="number" id="signup-age" name="age" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-goals">Objetivos</label>
+                            <textarea id="signup-goals" name="goals" class="form-textarea" placeholder="Ex: Perder peso, ganhar massa muscular..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-restrictions">Restrições Alimentares (opcional)</label>
+                            <textarea id="signup-restrictions" name="restrictions" class="form-textarea" placeholder="Ex: Lactose, glúten..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="signup-medical">Histórico Médico (opcional)</label>
+                            <textarea id="signup-medical" name="medicalHistory" class="form-textarea" placeholder="Condições médicas relevantes..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" id="signupBtn2">
+                            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                            FINALIZAR CADASTRO
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Step 3: Success -->
+                <div id="step-3-content" class="hidden">
+                    <div style="text-align: center;">
+                        <div style="width: 4rem; height: 4rem; border-radius: 50%; background: var(--secondary); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <svg viewBox="0 0 24 24" style="width: 2rem; height: 2rem; fill: none; stroke: white; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Cadastro Concluído!</h2>
+                        <p style="color: var(--muted-foreground); margin-bottom: 2rem;">
+                            Sua conta foi criada com sucesso. Agora você pode fazer login e escolher seu pacote.
+                        </p>
+                        <button class="btn btn-primary btn-lg btn-full" onclick="app.navigate('login')">
+                            <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                            FAZER LOGIN
+                        </button>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <p style="color: var(--muted-foreground);">
+                        Já tem uma conta? 
+                        <a href="#" onclick="app.navigate('login'); return false;" style="color: var(--primary); text-decoration: none;">
+                            Faça login
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PACKAGES PAGE -->
+    <div id="page-packages" class="page hidden">
+        <div style="min-height: 100vh; padding: 2rem 1.5rem;">
+            <div class="container-sm">
+                <button class="btn btn-outline" onclick="app.navigate('home')" style="margin-bottom: 2rem;">
+                    <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Voltar
+                </button>
+
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h1 style="font-size: 2.25rem; margin-bottom: 0.5rem;">Veja a Oferta exclusiva</h1>
+                    <p style="color: var(--muted-foreground);">
+                        Selecione o plano ideal para alcançar seus objetivos
+                    </p>
+                </div>
+
+                <div id="packages-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAYMENT PAGE -->
+    <div id="page-payment" class="page hidden">
+        <div class="container-sm" style="padding-top: 3rem; padding-bottom: 3rem;">
+            <button class="btn btn-outline" onclick="app.navigate('packages')" style="margin-bottom: 2rem;">
+                <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Voltar
+            </button>
+
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div class="hero-icon" style="width: 4rem; height: 4rem; margin-bottom: 1rem;">
+                    <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                </div>
+                <h1 style="font-size: 1.875rem; margin-bottom: 0.5rem;">Finalizar Pagamento</h1>
+                <p style="color: var(--muted-foreground);">Escolha a forma de pagamento</p>
+            </div>
+
+            <!-- Package Summary -->
+            <div id="payment-package-summary" class="card-gradient card-primary" style="margin-bottom: 2rem;">
+                <!-- Will be filled by JavaScript -->
+            </div>
+
+            <!-- Payment Method Selection -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h2 style="font-size: 1.25rem; margin-bottom: 1.5rem;">Método de Pagamento</h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <button class="payment-method-btn active" data-method="pix" onclick="app.selectPaymentMethod('pix')">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 3rem; height: 3rem; border-radius: 0.5rem; background: #7BC8A4; display: flex; align-items: center; justify-content: center;">
+                                <svg viewBox="0 0 24 24" style="width: 1.5rem; height: 1.5rem; fill: none; stroke: var(--secondary); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+                                    <rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect>
+                                    <path d="M7 12h10"></path>
+                                    <path d="M12 7v10"></path>
+                                </svg>
+                            </div>
+                            <div style="flex: 1; text-align: left;">
+                                <div style="font-weight: 600; margin-bottom: 0.25rem;">PIX</div>
+                                <div style="font-size: 0.875rem; color: var(--muted-foreground);">Aprovação instantânea</div>
+                            </div>
+                            <div class="payment-check">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PIX Payment -->
+            <div id="payment-pix" class="card">
+                <h2 style="font-size: 1.25rem; margin-bottom: 1.5rem;">Pagamento via PIX</h2>
+                
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <div id="pix-qrcode" style="width: 200px; height: 200px; background: white; border-radius: 1rem; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/images/qr.png" alt="QR Code PIX" style="width: 180px; height: 180px;">
+                    </div>
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
+                        Escaneie o QR Code acima com o app do seu banco
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label class="form-label">Ou copie o código PIX:</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" id="pix-code" class="form-input" value="00020126580014BR.GOV.BCB.PIX..." readonly style="flex: 1;">
+                        <button class="btn btn-secondary" onclick="app.copyPixCode()">
+                            <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" style="background: rgba(0, 191, 165, 0.1); border-color: var(--secondary); margin-bottom: 1.5rem;">
+                    <div style="display: flex; gap: 1rem;">
+                        <svg viewBox="0 0 24 24" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0; fill: none; stroke: var(--secondary); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <p style="font-size: 0.875rem; color: var(--muted);">
+                            Depois que você pagar, clique em Já fiz o pagamento, e é só aguardar um pouquinho até que nossa equipe aprove tudo com carinho. Obrigado por confiar na gente!
+                        </p>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-lg btn-full" id="confirmPixBtn" onclick="app.confirmPixPayment()">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    JÁ FIZ O PAGAMENTO
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CLIENT DASHBOARD -->
+    <div id="page-client" class="page hidden">
+        <header class="header">
+            <div class="container-sm">
+                <div class="header-content">
+                    <div class="logo" onclick="app.navigate('client')">
+                        <div class="logo-icon">
+                            <img src="assets/images/img.jpg" alt="Logo" class="logo-img">
+                        </div>
+                        <span class="logo-text">AV - Saúde & Performance</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn btn-primary" onclick="app.navigate('home')">
+                            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Início
+                        </button>
+                        <button class="btn btn-outline" onclick="app.handleLogout()">
+                            <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                            Sair
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>       
+
+        <div class="container-sm" style="padding: 2rem 1.5rem;">
+            <div style="margin-bottom: 2rem;">
+                <h1 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Olá, <span id="client-name"></span>!</h1>
+                <p style="color: var(--muted-foreground);">Bem-vindo ao seu painel</p>
+            </div>
+
+            <div id="client-alert"></div>
+
+            <div id="client-stats" class="stats-grid"></div>
+
+            
+
+    <!-- WHATSAPP -->
+    <section class="whatsapp-section">
+         <div class="whatsapp-box">
+                <div class="whatsapp-info">
+                  <img class="whatsapp-icon" src="https://img.icons8.com/?size=512&id=16713&format=png" alt="">
+                <div>
+                    <h3>Grupo Exclusivo</h3>
+                       <p>Entre no grupo para receber avisos importantes.</p>
+                </div>
+            </div>
+
+            <a href="https://chat.whatsapp.com/GqYjCWT1PKs1SSLgwrPv6X" target="_blank" class="whatsapp-button">
+                Entrar no Grupo
+            </a>
+        </div>
+    </section>
+
+            <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Conteúdos</h2>
+
+            <!-- ABAS -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="app.showClientTab('aulas')">Aulas</button>
+                <button class="tab-btn" onclick="app.showClientTab('treinos')">Treinos</button>
+                <button class="tab-btn" onclick="app.showClientTab('dietas')">Dietas</button>
+            </div>
+
+            <!-- CONTEÚDO DE CADA ABA -->
+            <div id="tab-aulas"></div>
+            <div id="tab-treinos" class="hidden"></div>
+            <div id="tab-dietas" class="hidden"></div>
+
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD -->
+    <div id="page-admin" class="page hidden">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo" onclick="app.navigate('admin')">
+                        <div class="logo-icon">
+                            <img src="assets/images/img.jpg" alt="Logo" class="logo-img">
+                        </div>
+                        <span class="logo-text">AV - Saúde & Performance</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn btn-primary" onclick="app.navigate('home')">
+                            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Início
+                        </button>
+                        <button class="btn btn-outline" onclick="app.handleLogout()">
+                            <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                            Sair
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container" style="padding: 2rem 1.5rem;">
+            <div style="margin-bottom: 2rem;">
+                <h1 style="font-size: 1.875rem; margin-bottom: 0.5rem;">Painel Administrativo</h1>
+                <p style="color: var(--muted-foreground);">Bem-vinda, <span id="admin-name"></span>!</p>
+            </div>
+
+            <div id="admin-stats"></div>
+
+            <div class="tabs">
+                <button class="tab active" data-tab="clients">Clientes</button>
+                <button class="tab" data-tab="packages">Pacotes</button>
+                <button class="tab" data-tab="content">Conteúdo</button>
+            </div>
+
+            <div id="admin-tab-content"></div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
